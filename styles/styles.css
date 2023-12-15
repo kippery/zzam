@@ -1556,6 +1556,17 @@ img {
     100% { left: 0; }
 }
 
+#slide2 {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 20px;
+    background: white;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 1s forwards;
+}
+
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
@@ -1654,6 +1665,179 @@ img {
         grid-column: span 1;
     }
 }
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-989 {
+        padding: var(--sectionPadding);
+    }
+    #reviews-989 .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 36.5rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #reviews-989 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #reviews-989 .cs-title {
+        margin: 0;
+        max-width: 24ch;
+    }
+    #reviews-989 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 2rem;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #reviews-989 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    #reviews-989 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #reviews-989 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #reviews-989 .cs-item {
+        list-style: none;
+        width: 100%;
+        grid-column: span 12;
+        grid-row: span 1;
+    }
+    #reviews-989 .cs-picture {
+        width: 100%;
+        /* 260px - 300px */
+        min-height: clamp(16.25rem, 30vw, 18.75rem);
+        aspect-ratio: 1.26153846;
+        display: block;
+        position: relative;
+    }
+    #reviews-989 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+        /* pushes the top of the image to the top of the container */
+        object-position: top;
+    }
+    #reviews-989 .cs-flex {
+        text-align: left;
+        width: 100%;
+        /* 16px - 32px */
+        padding: clamp(1rem, 3vw, 2rem);
+        /* prevents padding from affecting height and wodth */
+        box-sizing: border-box;
+        border: 1px solid #e8e8e8;
+        border-top: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #reviews-989 .cs-name {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+    }
+    #reviews-989 .cs-desc {
+        font-size: 1rem;
+        line-height: 1.5em;
+        font-weight: 400;
+        /* 8px - 28px */
+        margin: 0 0 clamp(0.5rem, 3.2vw, 1.75rem);
+        color: var(--bodyTextColor);
+        display: block;
+    }
+    #reviews-989 .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+    #reviews-989 .cs-item {
+        display: flex;
+        flex-direction: row;
+        grid-column: span 6;
+    }
+    #reviews-989 .cs-picture {
+        max-width: 15rem;
+        aspect-ratio: initial;
+    }
+    #reviews-989 .cs-flex {
+        width: 65%;
+        max-width: 24.375rem;
+        flex: none;
+        border-top: 1px solid #e8e8e8;
+        border-left: none;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #reviews-989 .cs-container {
+        max-width: 80rem;
+    }
+    #reviews-989 .cs-card-group {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+}
+
+                                
 
 /*-- -------------------------- -->
 <---          Reviews           -->
@@ -1796,6 +1980,215 @@ img {
         align-items: stretch;
     }
 }
+
+.custom-shape-divider-top-1702606225 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1702606225 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+    margin-top: -1px;
+}
+
+.custom-shape-divider-top-1702606225 .shape-fill {
+    fill: #1a1a1a;
+}
+
+
+.custom-shape-divider-top-1702605192 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1702605192 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+    margin-top: -1px;
+}
+
+.custom-shape-divider-top-1702605192 .shape-fill {
+    fill: var(--secondaryLight);
+}
+
+.custom-shape-divider-bottom-1702605305 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1702605305 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+    margin-top: -1px;
+}
+
+.custom-shape-divider-bottom-1702605305 .shape-fill {
+    fill: var(--secondaryLight);
+}
+
+.custom-shape-divider-bottom-1702605952 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1702605952 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1702605952 .shape-fill {
+    fill: #1a1a1a;
+}
+/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #stats-15 {
+        padding: var(--sectionPadding);
+        background-color: var(--secondaryLight);
+        /* Prevents bg image from overflowing */
+        overflow: hidden;
+        z-index: 1;
+    }
+    #stats-15 .cs-image {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.05;
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    #stats-15 .cs-image img {
+        height: 100%;
+    }
+    #stats-15 .cs-container {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 67.5rem;
+        margin: auto;
+    }
+    #stats-15 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        position: relative;
+        z-index: 2;
+    }
+    #stats-15 .cs-item {
+        list-style: none;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 3rem;
+        max-width: 15.9375rem;
+        display: block;
+    }
+    #stats-15 .cs-item:last-of-type {
+        margin-bottom: 0;
+    }
+    #stats-15 .cs-number {
+        /* 49px - 61px */
+        font-size: clamp(3.0625rem, 5.1vw, 3.8125rem);
+        line-height: 1.2em;
+        text-align: center;
+        font-weight: 700;
+        margin: auto;
+        /* 12px - 16px */
+        margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+        color: white;
+        display: block;
+    }
+    #stats-15 .cs-header {
+        /* 20px - 31px */
+        font-size: clamp(1.25rem, 2.4vw, 1.9375rem);
+        line-height: 1.5em;
+        text-align: center;
+        font-weight: 700;
+        margin: auto;
+        /* 12px - 16px */
+        margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+        color: white;
+        display: block;
+    }
+    #stats-15 .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.7vw, 1rem);
+        text-align: center;
+        line-height: 1.5em;
+        margin: 0;
+        color: black;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #stats-15 {
+        position: relative;
+    }
+    #stats-15 .cs-image {
+        left: 0;
+        opacity: 1;
+        /* set is as a repeating background-pattern */
+        background: url("https://csimg.nyc3.digitaloceanspaces.com/Stats/long-wave.svg");
+        background-size: auto 17.1875rem;
+        background-position: center;
+        background-repeat: repeat-x;
+    }
+    #stats-15 .cs-image img {
+        /* removed image */
+        display: none;
+    }
+    #stats-15 .cs-card-group {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        /* 32px - 64px */
+        column-gap: clamp(2rem, 6vw, 4rem);
+    }
+    #stats-15 .cs-item {
+        margin: 0;
+        width: 30%;
+        max-width: 15.9375rem;
+    }
+}
+
+                                
 
 /*-- -------------------------- -->
 <---            CTA             -->
